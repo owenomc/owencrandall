@@ -1,103 +1,153 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import React from "react";
+import Link from "next/link";
+
+export default function PortfolioPage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen bg-white text-black px-6 py-12 font-mono">
+      <section className="max-w-3xl mx-auto space-y-10">
+        <header>
+          <h1 className="text-4xl font-bold">HELLO, I&apos;M OWEN CRANDALL</h1>
+          <p className="text-lg mt-2">i’m 20, from minnesota.</p>
+          <p className="text-md ">fellow tech bro.</p>
+        </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <nav className="flex space-x-4 text-sky-800 underline">
+          <Link href="https://github.com/owenomc">GitHub</Link>
+          <Link href="https://x.com/owencrandall">X</Link>
+          <Link href="https://www.youtube.com/@owen_crandall">YouTube</Link>
+          <Link href="https://www.tiktok.com/@owen_crandall">TikTok</Link>
+        </nav>
+
+        <section>
+          <h2 className="text-xl font-semibold">A FEW ACHIEVEMENTS:</h2>
+          <ul className="list-disc list-inside space-y-1 text-black">
+            <li>built 10+ websites since high school </li>
+            <li>taught myself nextjs, vercel, databases, etc. </li>
+            <li>eagle scout - highest rank in boy scouts </li>
+            <li>bilingual - spanish </li>
+            <li>summer intern as an app dev, helped ship </li>
+            <li>website development club lead </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold">CURRENT PROJECTS:</h2>
+          <ul className="list-disc list-inside text-black space-y-1">
+            <li>TravlPacked.com – AI travel checklist and clothing</li>
+            <li>OYEAHK GAMES – indie dev, still building</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold">PAST PROJECTS:</h2>
+          <ul className="list-disc list-inside text-black space-y-1">
+            <li>
+              ShareStrides.com – online fitness platform - first solo startup
+            </li>
+            <li>FlipFin – AI financial - too large of scope</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold">WHAT&apos;S MY DRIVE?:</h2>
+          <p className="text-black">
+            i want to build things that solve real problems. i love creativity
+            and passion.
+          </p>
+        </section>
+
+        <details className="bg-sky-800 p-4 rounded-lg text-white">
+          <summary className="cursor-pointer font-semibold text-white">
+            HOW I STARTED
+          </summary>
+          <p className="mt-2 text-white">playing with legos.</p>
+          <p className="mt-2 text-white">
+            learned some HTML/CSS/JAVASCRIPT at the end of high school.{" "}
+          </p>
+          <p className="mt-2 text-white">
+            tried to make some 3D games. gave up, and started web dev.
+          </p>
+          <p className="mt-2 text-white">made some awful looking websites. </p>
+        </details>
+
+        <details className="bg-sky-800 p-4 rounded-lg text-white">
+          <summary className="cursor-pointer font-semibold">MY GOAL</summary>
+          <p className="mt-2 text-white">building a product with users.</p>
+          <p className="mt-2 text-white">
+            following my dreams. and never giving up.
+          </p>
+        </details>
+
+        <details className="bg-sky-800 p-4 rounded-lg text-white">
+          <summary className="cursor-pointer font-semibold">
+            MY MOTIVATIONS
+          </summary>
+          <p className="mt-2 text-white">fiancial independence and freedom.</p>
+          <p className="mt-2 text-white">giving back to the community.</p>
+        </details>
+
+        <details className="bg-sky-800 p-4 rounded-lg text-white">
+          <summary className="cursor-pointer font-semibold">
+            WHERE I SEE MYSELF IN 365 DAYS
+          </summary>
+          <p className="mt-2 text-white">
+            maybe living and working california or new york.{" "}
+          </p>
+          <p className="mt-2 text-white">
+            leading, building & full of passion.{" "}
+          </p>
+          <p className="mt-2 text-white">working even harder. </p>
+        </details>
+
+        <section>
+          <h2 className="text-xl font-semibold">HOBBIES:</h2>
+          <ul className="list-disc list-inside space-y-1 text-black mt-2">
+            Sports
+            <li>ran a marathon + chasing a sub-17 5k</li>
+            <li>ran a 4:39 1600m (mile) in hs </li>
+            <li>bodyweight bench</li>
+            <li>
+              hs varsity in 3 sports - cross country, track & field, alpine skiing
+            </li>
+            <li>growing up i played - baseball, soccer, tennis</li>
+          </ul>
+          <ul className="list-disc list-inside space-y-1 text-black mt-2">
+            Gaming
+            <li>rocket league - solo to champ 2 - 2000+ hrs</li>
+            <li>fortnite - 1500+ hrs (season 2 to season X)</li>
+            <li>apex legends - 500+ hrs diamond </li>
+            <li>valorant - quit the game at 400+ hrs (gold) </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold">ARTICLES</h2>
+          <ul className="list-disc list-inside text-black space-y-1">
+            <li>
+              article i wrote –{" "}
+              <a
+                href="https://medium.com/@owencrandall/a-guide-to-website-development-540a1b3285c3"
+                className="text-sky-800 underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                A Guide To Website Development
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <footer className="border-t border-gray-800 pt-6 text-sm">
+          <Link href="/contact">
+            <button className="cursor-pointer space-x-4 bg-sky-800 p-4 rounded-lg text-white">
+              Contact
+            </button>
+          </Link>
+          <p className="mt-4 text-black">OWEN CRANDALL © 2025 </p>
+        </footer>
+      </section>
+    </main>
   );
 }
