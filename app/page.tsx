@@ -37,6 +37,7 @@ export default function PortfolioPage() {
           <ul className="list-disc list-inside text-black space-y-1">
             <li>TravlPacked.com – AI travel checklist and clothing</li>
             <li>OYEAHK GAMES – indie dev, still building</li>
+            <li>Growing my social media presence</li>
           </ul>
         </section>
 
@@ -44,9 +45,9 @@ export default function PortfolioPage() {
           <h2 className="text-xl font-semibold">PAST PROJECTS:</h2>
           <ul className="list-disc list-inside text-black space-y-1">
             <li>
-              ShareStrides.com – online fitness platform - first solo startup
+              ShareStrides.com – online fitness platform, first solo startup
             </li>
-            <li>FlipFin – AI financial - too large of scope</li>
+            <li>FlipFin – AI personal finance education - too large of scope</li>
           </ul>
         </section>
 
@@ -107,7 +108,7 @@ export default function PortfolioPage() {
             Sports
             <li>ran a marathon + chasing a sub-17 5k</li>
             <li>ran a 4:39 1600m (mile) in hs </li>
-            <li>bodyweight bench</li>
+            <li>bodyweight bench press</li>
             <li>
               hs varsity in 3 sports - cross country, track & field, alpine skiing
             </li>
@@ -123,7 +124,7 @@ export default function PortfolioPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold">ARTICLES</h2>
+          <h2 className="text-xl font-semibold">ARTICLES:</h2>
           <ul className="list-disc list-inside text-black space-y-1">
             <li>
               article i wrote –{" "}
