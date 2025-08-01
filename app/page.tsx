@@ -39,7 +39,7 @@ export default function PortfolioPage() {
         <section>
           <h2 className="text-xl font-semibold">CURRENT PROJECTS:</h2>
           <ul className="list-disc list-inside text-black space-y-1">
-            <li>TravlPacked.com – AI travel checklist and clothing</li>
+            <li>Travel Packed – AI travel checklist and clothing</li>
             <li>OYEAHK GAMES – indie dev, still building</li>
             <li>Growing my social media presence</li>
           </ul>
