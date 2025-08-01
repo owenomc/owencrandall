@@ -53,6 +53,7 @@ export default function PortfolioPage() {
             </li>
             <li>FlipFin – AI personal finance education - too large of scope</li>
             <li>Soul Theives – 3D soul catching game, school project i expanded on</li>
+            <li>Many more..</li>
           </ul>
         </section>
 
