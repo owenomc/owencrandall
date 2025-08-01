@@ -9,11 +9,11 @@ export default function ContactPage() {
       <section className="max-w-2xl mx-auto space-y-5">
         <header>
           <h1 className="text-4xl font-bold text-sky-800">Contact</h1>
-          <p className="mt-2 text-md text-black">
+          <p className="mt-6 text-md text-black">
             want to work together, ask a question, or just say hi?
           </p>
           <p className="mt-2 text-md text-black">
-            message me here:
+            message me:
           </p>
         </header>
 
@@ -49,13 +49,13 @@ export default function ContactPage() {
           ></textarea>
           <button
             type="submit"
-            className="cursor-pointer bg-sky-800 text-white px-6 py-3 rounded-lg hover:bg-sky-800"
+            className="hover:scale-101 cursor-pointer bg-sky-800 text-white px-6 py-3 rounded-lg hover:bg-sky-800"
           >
             Send Message
           </button>
         </form>
 
-        <Link href="/" className="text-sky-800 underline block text-sm mt-4">
+        <Link href="/" className="hover:scale-101 text-sky-800 underline block text-sm mt-4">
           ← Back to Portfolio
         </Link>
       </section>

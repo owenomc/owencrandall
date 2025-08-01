@@ -9,26 +9,30 @@ export default function PortfolioPage() {
       <section className="max-w-3xl mx-auto space-y-10">
         <header>
           <h1 className="text-4xl font-bold">HELLO, I&apos;M OWEN CRANDALL</h1>
-          <p className="text-lg mt-2">i’m 20, from minnesota.</p>
-          <p className="text-md ">fellow tech bro.</p>
+          <p className="text-lg mt-2">
+              i’m 20, from {" "}
+              <a
+                href="https://www.exploreminnesota.com/trip-planning/about-minnesota"
+                className="text-lg mt-2 text-sky-800 underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                minnesota
+              </a>
+            </p>
+          <p className="text-lg mt-2">i’ve been building for 600+ days</p>
         </header>
-
-        <nav className="flex space-x-4 text-sky-800 underline">
-          <Link href="https://github.com/owenomc">GitHub</Link>
-          <Link href="https://x.com/owencrandall">X</Link>
-          <Link href="https://www.youtube.com/@owen_crandall">YouTube</Link>
-          <Link href="https://www.tiktok.com/@owen_crandall">TikTok</Link>
-        </nav>
 
         <section>
           <h2 className="text-xl font-semibold">A FEW ACHIEVEMENTS:</h2>
           <ul className="list-disc list-inside space-y-1 text-black">
             <li>built 10+ websites since high school </li>
             <li>taught myself nextjs, vercel, databases, etc. </li>
-            <li>eagle scout - highest rank in boy scouts </li>
-            <li>bilingual - spanish </li>
             <li>summer intern as an app dev, helped ship </li>
             <li>website development club lead </li>
+            <li>eagle scout - highest rank in boy scouts </li>
+            <li>bilingual - spanish </li>
+            <li>started college with 20+ credits </li>
           </ul>
         </section>
 
@@ -48,6 +52,7 @@ export default function PortfolioPage() {
               ShareStrides.com – online fitness platform, first solo startup
             </li>
             <li>FlipFin – AI personal finance education - too large of scope</li>
+            <li>Soul Theives – 3D soul catching game, school project i expanded on</li>
           </ul>
         </section>
 
@@ -59,7 +64,7 @@ export default function PortfolioPage() {
           </p>
         </section>
 
-        <details className="bg-sky-800 p-4 rounded-lg text-white">
+        <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-101">
           <summary className="cursor-pointer font-semibold text-white">
             HOW I STARTED
           </summary>
@@ -73,7 +78,7 @@ export default function PortfolioPage() {
           <p className="mt-2 text-white">made some awful looking websites. </p>
         </details>
 
-        <details className="bg-sky-800 p-4 rounded-lg text-white">
+        <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-101">
           <summary className="cursor-pointer font-semibold">MY GOAL</summary>
           <p className="mt-2 text-white">building a product with users.</p>
           <p className="mt-2 text-white">
@@ -81,15 +86,16 @@ export default function PortfolioPage() {
           </p>
         </details>
 
-        <details className="bg-sky-800 p-4 rounded-lg text-white">
+        <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-101">
           <summary className="cursor-pointer font-semibold">
             MY MOTIVATIONS
           </summary>
+          <p className="mt-2 text-white">having too many ideas.</p>
           <p className="mt-2 text-white">fiancial independence and freedom.</p>
           <p className="mt-2 text-white">giving back to the community.</p>
         </details>
 
-        <details className="bg-sky-800 p-4 rounded-lg text-white">
+        <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-101">
           <summary className="cursor-pointer font-semibold">
             WHERE I SEE MYSELF IN 365 DAYS
           </summary>
@@ -140,9 +146,17 @@ export default function PortfolioPage() {
           </ul>
         </section>
 
+        
+        <nav className="flex space-x-4 text-sky-800 underline">
+          <Link href="https://github.com/owenomc">GitHub</Link>
+          <Link href="https://x.com/owencrandall">X</Link>
+          <Link href="https://www.youtube.com/@owen_crandall">YouTube</Link>
+          <Link href="https://www.tiktok.com/@owen_crandall">TikTok</Link>
+        </nav>
+
         <footer className="border-t border-gray-800 pt-6 text-sm">
           <Link href="/contact">
-            <button className="cursor-pointer space-x-4 bg-sky-800 p-4 rounded-lg text-white">
+            <button className="cursor-pointer space-x-4 bg-sky-800 p-4 rounded-lg text-white hover:scale-101">
               Contact
             </button>
           </Link>
