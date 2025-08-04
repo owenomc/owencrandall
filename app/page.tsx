@@ -36,20 +36,29 @@ export default function PortfolioPage() {
           <p className="text-lg mt-2">I’ve been building for 600+ days</p>
         </header>
 
+        {/* ABOUT */}
+        <section>
+          <h2 className="text-xl font-semibold">ABOUT:</h2>
+          <ul className="text-md list-disc list-inside space-y-1 text-black">
+            <li>Major: B.S. in Computer Science </li>
+            <li>Current role: App Developer Intern </li>
+            <li>Goal Career: Software Engineer </li>
+          </ul>
+        </section>
+
         {/* ACHIEVEMENTS */}
         <section>
           <h2 className="text-xl font-semibold">A FEW ACHIEVEMENTS:</h2>
           <ul className="text-md list-disc list-inside space-y-1 text-black">
             <li>Built 10+ websites since high school </li>
             <li>Taught myself nextjs, vercel, databases, etc. </li>
-            <li>Summer intern as an app dev, helped ship </li>
-            <li>Bulldog Rocketry - Web Development Lead </li>
             <li>Eagle scout - highest rank in boy scouts </li>
             <li>Bilingual - spanish </li>
             <li>Started college with 20+ credits </li>
           </ul>
         </section>
 
+        {/* SIDE PROJECTS */}
         <section>
           <h2 className="text-xl font-semibold">CURRENT SIDE PROJECTS:</h2>
           <ul className="text-md list-disc list-inside text-black space-y-1">
@@ -69,7 +78,7 @@ export default function PortfolioPage() {
               >
                 codecurse.com
               </Link>{" "}
-              – Computer Science Course & Toolkit
+              – Computer science course & toolkit
             </li>
             <li>
               <Link
@@ -89,8 +98,8 @@ export default function PortfolioPage() {
               </Link>{" "}
               – Helping build a website for a community overwatch 2 league
             </li>
-
-            <li>Growing my social media presence - X, YouTube, LinkedIn </li>
+            <li>Bulldog Rocketry - Web Development Lead </li>
+            <li>Growing my social media presence </li>
             <li>And more..</li>
           </ul>
         </section>
@@ -125,7 +134,9 @@ export default function PortfolioPage() {
         </section>
 
         <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
-          <summary className="text-xl cursor-pointer text-white">HOW I STARTED</summary>
+          <summary className="text-xl cursor-pointer text-white">
+            HOW I STARTED
+          </summary>
           <p className="mt-2 text-white">Playing with legos.</p>
           <p className="mt-2 text-white">
             Learned some HTML/CSS/JAVASCRIPT at the end of high school.{" "}
@@ -139,6 +150,9 @@ export default function PortfolioPage() {
         <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
           <summary className="text-xl cursor-pointer ">MY GOAL</summary>
           <p className="text-md mt-2 text-white">Building for users.</p>
+          <p className="text-md mt-2 text-white ">
+            Shipping production-ready software. Fast.{" "}
+          </p>
           <p className="text-md mt-2 text-white">
             Following my dreams. And never giving up.
           </p>
@@ -147,8 +161,12 @@ export default function PortfolioPage() {
         <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
           <summary className="text-xl cursor-pointer ">MY MOTIVATIONS</summary>
           <p className="text-md mt-2 text-white">Having too many ideas.</p>
-          <p className="text-md mt-2 text-white">Fiancial independence and freedom.</p>
-          <p className="text-md mt-2 text-white">Giving back to the community.</p>
+          <p className="text-md mt-2 text-white">
+            Fiancial independence and freedom.
+          </p>
+          <p className="text-md mt-2 text-white">
+            Giving back to the community.
+          </p>
         </details>
 
         <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
@@ -168,21 +186,31 @@ export default function PortfolioPage() {
           <h2 className="text-xl font-semibold mb-4">HOBBIES:</h2>
           <ul className="list-disc list-inside space-y-1 text-black mb-4">
             <p className="text-lg font-semibold"> Sports</p>
-            <li className="text-md">I run a bit + marathon + chasing a sub-17 5k</li>
+            <li className="text-md">
+              I run a bit + marathon + chasing a sub-17 5k
+            </li>
             <li className="text-md">Ran a 4:39 1600m (mile) in HS </li>
             <li className="text-md">Bodyweight bench press</li>
             <li className="text-md">
               HS varsity in 3 sports - cross country, track & field, alpine
               skiing
             </li>
-            <li className="text-md">Growing up I also played - baseball, soccer, tennis</li>
+            <li className="text-md">
+              Growing up I also played - baseball, soccer, tennis
+            </li>
           </ul>
           <ul className="list-disc list-inside space-y-1 text-black">
             <p className="text-lg font-semibold"> Gaming</p>
-            <li className="text-md">Rocket league - 2000+ hrs (solo queue to champ 2) </li>
-            <li className="text-md">Fortnite - 1500+ hrs (season 2 to season X) </li>
+            <li className="text-md">
+              Rocket league - 2000+ hrs (solo queue to champ 2){" "}
+            </li>
+            <li className="text-md">
+              Fortnite - 1500+ hrs (season 2 to season X){" "}
+            </li>
             <li className="text-md">Apex legends - 500+ hrs (diamond) </li>
-            <li className="text-md">Valorant - quit the game at 400+ hrs (gold) </li>
+            <li className="text-md">
+              Valorant - quit the game at 400+ hrs (gold){" "}
+            </li>
           </ul>
         </section>
 
