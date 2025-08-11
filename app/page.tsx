@@ -21,25 +21,25 @@ export default function PortfolioPage() {
 
         {/* TITLE */}
         <header>
-          <h1 className="text-4xl font-bold">HELLO, I&apos;M OWEN CRANDALL</h1>
-          <p className="text-lg mt-2">
+          <h1 className="text-xl font-bold">HELLO, I&apos;M OWEN CRANDALL</h1>
+          <p className="text-sm mt-2">
             I’m 20, from{" "}
             <a
               href="https://www.exploreminnesota.com/trip-planning/about-minnesota"
-              className="text-lg mt-2 text-sky-800 underline"
+              className="text-sm mt-2 text-sky-800 underline"
               target="_blank"
               rel="noopener noreferrer"
             >
               Minnesota
             </a>
           </p>
-          <p className="text-lg mt-2">I’ve been building for 600+ days</p>
+          <p className="text-sm mt-2">I’ve been building for 600+ days</p>
         </header>
 
         {/* ABOUT */}
         <section>
-          <h2 className="text-xl font-semibold">ABOUT:</h2>
-          <ul className="text-md list-disc list-inside space-y-1 text-black">
+          <h2 className="text-md font-semibold">ABOUT:</h2>
+          <ul className="text-sm list-disc list-inside space-y-1 text-black">
             <li>Major: B.S. in Computer Science </li>
             <li>Current role: App Developer Intern </li>
             <li>Goal Career: Software Engineer </li>
@@ -48,8 +48,8 @@ export default function PortfolioPage() {
 
         {/* ACHIEVEMENTS */}
         <section>
-          <h2 className="text-xl font-semibold">A FEW ACHIEVEMENTS:</h2>
-          <ul className="text-md list-disc list-inside space-y-1 text-black">
+          <h2 className="text-md font-semibold">A FEW ACHIEVEMENTS:</h2>
+          <ul className="text-sm list-disc list-inside space-y-1 text-black">
             <li>Built 10+ websites since high school </li>
             <li>Taught myself nextjs, vercel, databases, etc. </li>
             <li>Eagle scout - highest rank in boy scouts </li>
@@ -60,8 +60,8 @@ export default function PortfolioPage() {
 
         {/* SIDE PROJECTS */}
         <section>
-          <h2 className="text-xl font-semibold">CURRENT SIDE PROJECTS:</h2>
-          <ul className="text-md list-disc list-inside text-black space-y-1">
+          <h2 className="text-md font-semibold">CURRENT SIDE PROJECTS:</h2>
+          <ul className="text-sm list-disc list-inside text-black space-y-1">
             <li>
               <Link
                 href="https://travlpacked.vercel.app"
@@ -105,8 +105,8 @@ export default function PortfolioPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold">PAST PROJECTS:</h2>
-          <ul className="text-md list-disc list-inside text-black space-y-1">
+          <h2 className="text-md font-semibold">PAST PROJECTS:</h2>
+          <ul className="text-sm list-disc list-inside text-black space-y-1">
             <li>
               FlipFin – AI personal finance education, had too large of scope
               (may revist)
@@ -126,97 +126,106 @@ export default function PortfolioPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold">WHAT&apos;S MY DRIVE?:</h2>
-          <p className="text-md text-black">
+          <h2 className="text-md font-semibold">WHAT&apos;S MY DRIVE?:</h2>
+          <p className="text-sm text-black">
             I want to build things that solve real problems. I love creativity
             and passion.
           </p>
         </section>
 
         <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
-          <summary className="text-xl cursor-pointer text-white">
+          <summary className="text-md cursor-pointer text-white">
             HOW I STARTED
           </summary>
-          <p className="mt-2 text-white">Playing with legos.</p>
-          <p className="mt-2 text-white">
+          <p className="text-sm mt-2 text-white">Playing with legos.</p>
+          <p className="text-sm mt-2 text-white">
             Learned some HTML/CSS/JAVASCRIPT at the end of high school.{" "}
           </p>
-          <p className="mt-2 text-white">
+          <p className="text-sm mt-2 text-white">
             Tried to make some 3D games. Gave up, and started web dev.
           </p>
-          <p className="mt-2 text-white">Made some awful looking websites. </p>
+          <p className="text-sm mt-2 text-white">Made some awful looking websites. </p>
         </details>
 
         <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
-          <summary className="text-xl cursor-pointer ">MY GOAL</summary>
-          <p className="text-md mt-2 text-white">Building for users.</p>
-          <p className="text-md mt-2 text-white ">
+          <summary className="text-md cursor-pointer ">MY GOAL</summary>
+          <p className="text-sm mt-2 text-white">Building for users.</p>
+          <p className="text-sm mt-2 text-white ">
             Shipping production-ready software. Fast.{" "}
           </p>
-          <p className="text-md mt-2 text-white">
+          <p className="text-sm mt-2 text-white">
             Following my dreams. And never giving up.
           </p>
         </details>
 
         <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
-          <summary className="text-xl cursor-pointer ">MY MOTIVATIONS</summary>
-          <p className="text-md mt-2 text-white">Having too many ideas.</p>
-          <p className="text-md mt-2 text-white">
+          <summary className="text-md cursor-pointer ">MY MOTIVATIONS</summary>
+          <p className="text-sm mt-2 text-white">Having too many ideas.</p>
+          <p className="text-sm mt-2 text-white">
             Fiancial independence and freedom.
           </p>
-          <p className="text-md mt-2 text-white">
+          <p className="text-sm mt-2 text-white">
             Giving back to the community.
           </p>
         </details>
 
         <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
-          <summary className="text-xl cursor-pointer ">
+          <summary className="text-md cursor-pointer ">
             WHERE I SEE MYSELF IN 365 DAYS
           </summary>
-          <p className="text-md  mt-2 text-white">
+          <p className="text-sm  mt-2 text-white">
             Maybe living and working california or new york.{" "}
           </p>
-          <p className="text-md mt-2 text-white">
+          <p className="text-sm mt-2 text-white">
             Leading, building & full of passion.{" "}
           </p>
-          <p className="text-md mt-2 text-white">Working even harder. </p>
+          <p className="text-sm mt-2 text-white">Working even harder. </p>
         </details>
 
         <section>
-          <h2 className="text-xl font-semibold mb-4">HOBBIES:</h2>
+          <h2 className="text-lg font-semibold mb-4">HOBBIES:</h2>
           <ul className="list-disc list-inside space-y-1 text-black mb-4">
-            <p className="text-lg font-semibold"> Sports</p>
-            <li className="text-md">
+            <p className="text-md font-semibold"> Sports</p>
+            <li className="text-sm">
               I run a bit + marathon + chasing a sub-17 5k
             </li>
-            <li className="text-md">Ran a 4:39 1600m (mile) in HS </li>
-            <li className="text-md">Bodyweight bench press</li>
-            <li className="text-md">
+            <li className="text-sm">Ran a 4:39 1600m (mile) in HS </li>
+            <li className="text-sm">Bodyweight bench press</li>
+            <li className="text-sm">
               HS varsity in 3 sports - cross country, track & field, alpine
               skiing
             </li>
-            <li className="text-md">
+            <li className="text-sm">
               Growing up I also played - baseball, soccer, tennis
             </li>
           </ul>
           <ul className="list-disc list-inside space-y-1 text-black">
-            <p className="text-lg font-semibold"> Gaming</p>
-            <li className="text-md">
-              Rocket league - 2000+ hrs (solo queue to champ 2){" "}
+            <p className="text-md font-semibold"> Gaming</p>
+            <li className="text-sm">
+              Clash Royale: 8700+ trophies (9+ years played){" "}
             </li>
-            <li className="text-md">
-              Fortnite - 1500+ hrs (season 2 to season X){" "}
+            <li className="text-sm">
+              Clash of Clans: Town Hall Level 16 {" "}
             </li>
-            <li className="text-md">Apex legends - 500+ hrs (diamond) </li>
-            <li className="text-md">
-              Valorant - quit the game at 400+ hrs (gold){" "}
+            <li className="text-sm">
+              Pokemon Go: Level 34 & Pokemon TCGP: Level 42 {" "}
+            </li>
+            <li className="text-sm">
+              Rocket league: 2000+ hrs (solo queue to champ 2){" "}
+            </li>
+            <li className="text-sm">
+              Fortnite: 1500+ hrs (season 2 to season X){" "}
+            </li>
+            <li className="text-sm">Apex legends: 500+ hrs (diamond) </li>
+            <li className="text-sm">
+              Valorant: 400+ hrs (gold){" "}
             </li>
           </ul>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold">ARTICLES:</h2>
-          <ul className="text-md list-disc list-inside text-black space-y-1">
+          <h2 className="text-md font-semibold">ARTICLES:</h2>
+          <ul className="text-sm list-disc list-inside text-black space-y-1">
             <li>
               Article I wrote –{" "}
               <a
@@ -231,20 +240,20 @@ export default function PortfolioPage() {
           </ul>
         </section>
 
-        <nav className="text-lg flex space-x-4 text-sky-800 underline">
+        <nav className="text-md flex space-x-4 text-sky-800 underline">
           <Link href="https://github.com/owenomc">GitHub</Link>
           <Link href="https://x.com/owencrandall">X</Link>
           <Link href="https://www.youtube.com/@owen_crandall">YouTube</Link>
           <Link href="https://www.tiktok.com/@owen_crandall">TikTok</Link>
         </nav>
 
-        <footer className="border-t border-gray-800 pt-6 text-sm">
+        <footer className="border-t border-gray-800 pt-6">
           <Link href="/contact">
-            <button className="text-xl cursor-pointer space-x-4 bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
+            <button className="text-lg cursor-pointer space-x-4 bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
               Contact
             </button>
           </Link>
-          <p className="text-md mt-4 text-black">OWEN CRANDALL © 2025 </p>
+          <p className="text-sm mt-4 text-black">OWEN CRANDALL © 2025 </p>
         </footer>
       </section>
     </main>
