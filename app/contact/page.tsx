@@ -8,8 +8,8 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white text-black px-6 py-12 font-mono">
       <section className="max-w-2xl mx-auto space-y-5">
         <header>
-          <h1 className="text-4xl font-bold text-sky-800">Contact</h1>
-          <p className="mt-6 text-md text-black">
+          <h1 className="text-2xl font-bold text-sky-800">Contact</h1>
+          <p className="mt-6 text-sm text-black">
             Want to work together, ask a question, or just say hi? Reach out!
           </p>
         </header>
@@ -17,7 +17,7 @@ export default function ContactPage() {
         <form
           action="https://formsubmit.co/owenmcrandall@gmail.com"
           method="POST"
-          className="space-y-4"
+          className="text-sm space-y-4"
         >
           {/* Prevent spam */}
           <input type="hidden" name="_captcha" value="false" />
@@ -46,13 +46,13 @@ export default function ContactPage() {
           ></textarea>
           <button
             type="submit"
-            className="hover:scale-105 cursor-pointer bg-sky-800 text-white px-6 py-3 rounded-lg hover:bg-sky-800"
+            className="text-sm hover:scale-105 cursor-pointer bg-sky-800 text-white px-6 py-3 rounded-lg hover:bg-sky-800"
           >
             Send Message
           </button>
         </form>
 
-        <Link href="/" className="hover:scale-105 text-sky-800 underline block text-sm mt-4">
+        <Link href="/" className="text-sm hover:scale-105 text-sky-800 underline block mt-4">
           ← Back to Portfolio
         </Link>
       </section>
