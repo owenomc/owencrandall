@@ -144,7 +144,9 @@ export default function PortfolioPage() {
           <p className="text-sm mt-2 text-white">
             Tried to make some 3D games. Gave up, and started web dev.
           </p>
-          <p className="text-sm mt-2 text-white">Made some awful looking websites. </p>
+          <p className="text-sm mt-2 text-white">
+            Made some awful looking websites.{" "}
+          </p>
         </details>
 
         <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
@@ -204,11 +206,9 @@ export default function PortfolioPage() {
             <li className="text-sm">
               Clash Royale: 8700+ trophies (9+ years played){" "}
             </li>
+            <li className="text-sm">Clash of Clans: Town Hall Level 16 </li>
             <li className="text-sm">
-              Clash of Clans: Town Hall Level 16 {" "}
-            </li>
-            <li className="text-sm">
-              Pokemon Go: Level 34 & Pokemon TCGP: Level 42 {" "}
+              Pokemon Go: Level 34 & Pokemon TCGP: Level 42{" "}
             </li>
             <li className="text-sm">
               Rocket league: 2000+ hrs (solo queue to champ 2){" "}
@@ -217,9 +217,7 @@ export default function PortfolioPage() {
               Fortnite: 1500+ hrs (season 2 to season X){" "}
             </li>
             <li className="text-sm">Apex legends: 500+ hrs (diamond) </li>
-            <li className="text-sm">
-              Valorant: 400+ hrs (gold){" "}
-            </li>
+            <li className="text-sm">Valorant: 400+ hrs (gold) </li>
           </ul>
         </section>
 
@@ -240,19 +238,24 @@ export default function PortfolioPage() {
           </ul>
         </section>
 
-        <nav className="text-md flex space-x-4 text-sky-800 underline">
-          <Link href="https://github.com/owenomc">GitHub</Link>
-          <Link href="https://x.com/owencrandall">X</Link>
-          <Link href="https://www.youtube.com/@owen_crandall">YouTube</Link>
-          <Link href="https://www.tiktok.com/@owen_crandall">TikTok</Link>
-        </nav>
-
         <footer className="border-t border-gray-800 pt-6">
+          
+          
           <Link href="/contact">
             <button className="text-lg cursor-pointer space-x-4 bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
               Contact
             </button>
           </Link>
+          <nav className="cursur-pointer text-md flex space-x-4 underline pt-4">
+            <Link
+              href="https://linktr.ee/owenomc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black hover:text-sky-800"
+            >
+              Linktree <span className=""> (LinkedIn, Portfolio, X, etc.) </span>
+            </Link>
+          </nav>
           <p className="text-sm mt-4 text-black">OWEN CRANDALL © 2025 </p>
         </footer>
       </section>
