@@ -40,9 +40,8 @@ export default function PortfolioPage() {
         <section>
           <h2 className="text-md font-semibold">ABOUT:</h2>
           <ul className="text-sm list-disc list-inside space-y-1 text-black">
+            <li>Career: Software Engineer </li>
             <li>Major: B.S. in Computer Science </li>
-            <li>Current role: App Developer Intern </li>
-            <li>Goal Career: Software Engineer </li>
           </ul>
         </section>
 
@@ -239,8 +238,6 @@ export default function PortfolioPage() {
         </section>
 
         <footer className="border-t border-gray-800 pt-6">
-          
-          
           <Link href="/contact">
             <button className="text-lg cursor-pointer space-x-4 bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
               Contact
@@ -253,7 +250,8 @@ export default function PortfolioPage() {
               rel="noopener noreferrer"
               className="text-black hover:text-sky-800"
             >
-              Linktree <span className=""> (LinkedIn, Portfolio, X, etc.) </span>
+              Linktree{" "}
+              <span className=""> (LinkedIn, Portfolio, X, etc.) </span>
             </Link>
           </nav>
           <p className="text-sm mt-4 text-black">OWEN CRANDALL © 2025 </p>
