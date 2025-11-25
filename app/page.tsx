@@ -5,25 +5,24 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function PortfolioPage() {
+  const birthDate = new Date("2005-06-02");
+  const today = new Date();
+  const age =
+    today.getFullYear() -
+    birthDate.getFullYear() -
+    (today <
+    new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate())
+      ? 1
+      : 0);
+
   return (
     <main className="min-h-screen bg-white text-black px-6 py-12 font-mono">
       <section className="max-w-3xl mx-auto space-y-10">
-        {/* IMAGE */}
-        <div className="flex items-center justify-start relative h-20 w-20">
-          <Image
-            src="/owenlogo.png"
-            alt="Owen Logo"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
-
         {/* TITLE */}
         <header>
           <h1 className="text-xl font-bold">HELLO, I&apos;M OWEN CRANDALL</h1>
           <p className="text-sm mt-2">
-            I’m 20, from{" "}
+            I’m {age}, from{" "}
             <a
               href="https://www.exploreminnesota.com/trip-planning/about-minnesota"
               className="text-sm mt-2 text-sky-800 underline"
@@ -42,33 +41,31 @@ export default function PortfolioPage() {
           <ul className="text-sm list-disc list-inside space-y-1 text-black">
             <li>Career: Software Engineer </li>
             <li>Major: B.S. in Computer Science </li>
-          </ul>
-        </section>
-
-        {/* ACHIEVEMENTS */}
-        <section>
-          <h2 className="text-md font-semibold">A FEW ACHIEVEMENTS:</h2>
-          <ul className="text-sm list-disc list-inside space-y-1 text-black">
-            <li>Built 10+ websites since high school </li>
-            <li>Taught myself nextjs, vercel, databases, etc. </li>
-            <li>Eagle scout - highest rank in boy scouts </li>
-            <li>Bilingual - spanish </li>
-            <li>Started college with 20+ credits </li>
+            <li>Started coding at age 17 </li>
           </ul>
         </section>
 
         {/* SIDE PROJECTS */}
         <section>
-          <h2 className="text-md font-semibold">CURRENT SIDE PROJECTS:</h2>
+          <h2 className="text-md font-semibold">CURRENT PROJECTS:</h2>
           <ul className="text-sm list-disc list-inside text-black space-y-1">
             <li>
               <Link
-                href="https://travlpacked.vercel.app"
+                href="https://wealtho.app"
                 className="text-sky-800 underline"
               >
-                travlpacked.vercel.app
+                Wealtho
               </Link>{" "}
-              – AI travel packing and clothing
+              – AI Personal Finance
+            </li>
+            <li>
+              <Link
+                href="https://tryupdate.app"
+                className="text-sky-800 underline"
+              >
+                UPDATE
+              </Link>{" "}
+              – The next generation of networking
             </li>
             <li>
               <Link
@@ -77,7 +74,25 @@ export default function PortfolioPage() {
               >
                 codecurse.com
               </Link>{" "}
-              – Computer science course & toolkit
+              – Computer science course
+            </li>
+            <li>
+              <Link
+                href="https://x.com/OOLgg_"
+                className="text-sky-800 underline"
+              >
+                OOL
+              </Link>{" "}
+              – (WIP) Helping build a website for a community overwatch 2 league
+            </li>
+            <li>
+              <Link
+                href="https://s7udio.vercel.app"
+                className="text-sky-800 underline"
+              >
+                s7udio
+              </Link>{" "}
+              – (WIP) Helping build a website for a community overwatch 2 league
             </li>
             <li>
               <Link
@@ -88,24 +103,21 @@ export default function PortfolioPage() {
               </Link>{" "}
               – Indie dev, still building (2 games in progress)
             </li>
-            <li>
-              <Link
-                href="https://x.com/OOLgg_"
-                className="text-sky-800 underline"
-              >
-                X.com/OOLgg_
-              </Link>{" "}
-              – Helping build a website for a community overwatch 2 league
-            </li>
-            <li>Bulldog Rocketry - Web Development Lead </li>
-            <li>Growing my social media presence </li>
-            <li>And more..</li>
           </ul>
         </section>
 
         <section>
           <h2 className="text-md font-semibold">PAST PROJECTS:</h2>
           <ul className="text-sm list-disc list-inside text-black space-y-1">
+            <li>
+              <Link
+                href="https://travlpacked.vercel.app"
+                className="text-sky-800 underline"
+              >
+                travlpacked.vercel.app
+              </Link>{" "}
+              – AI travel packing and clothing
+            </li>
             <li>
               FlipFin – AI personal finance education, had too large of scope
               (may revist)
@@ -132,7 +144,7 @@ export default function PortfolioPage() {
           </p>
         </section>
 
-        <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
+        <details className="bg-sky-800 p-4 rounded-3xl text-white hover:scale-102 transition">
           <summary className="text-md cursor-pointer text-white">
             HOW I STARTED
           </summary>
@@ -148,18 +160,18 @@ export default function PortfolioPage() {
           </p>
         </details>
 
-        <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
+        <details className="bg-sky-800 p-4 rounded-3xl text-white hover:scale-102 transition">
           <summary className="text-md cursor-pointer ">MY GOAL</summary>
+          <p className="text-sm mt-2 text-white">Following my dreams.</p>
           <p className="text-sm mt-2 text-white">Building for users.</p>
           <p className="text-sm mt-2 text-white ">
-            Shipping production-ready software. Fast.{" "}
+            Shipping production-ready software solo. And fast.{" "}
           </p>
-          <p className="text-sm mt-2 text-white">
-            Following my dreams. And never giving up.
-          </p>
+
+          <p className="text-sm mt-2 text-white">Never giving up.</p>
         </details>
 
-        <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
+        <details className="bg-sky-800 p-4 rounded-3xl text-white hover:scale-102 transition">
           <summary className="text-md cursor-pointer ">MY MOTIVATIONS</summary>
           <p className="text-sm mt-2 text-white">Having too many ideas.</p>
           <p className="text-sm mt-2 text-white">
@@ -170,8 +182,8 @@ export default function PortfolioPage() {
           </p>
         </details>
 
-        <details className="bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
-          <summary className="text-md cursor-pointer ">
+        <details className="bg-sky-800 p-4 rounded-3xl text-white hover:scale-102 transition">
+          <summary className="text-md cursor-pointer">
             WHERE I SEE MYSELF IN 365 DAYS
           </summary>
           <p className="text-sm  mt-2 text-white">
@@ -183,6 +195,19 @@ export default function PortfolioPage() {
           <p className="text-sm mt-2 text-white">Working even harder. </p>
         </details>
 
+        {/* ACHIEVEMENTS */}
+        <section>
+          <h2 className="text-lg font-semibold mb-4">ACHIEVEMENTS:</h2>
+          <ul className="text-sm list-disc list-inside space-y-1 text-black">
+            <li>Built 10+ websites since high school </li>
+            <li>Taught myself nextjs, vercel, databases, etc. </li>
+            <li>Eagle scout (highest rank in boy scouts) </li>
+            <li>Bilingual with Spanish (spanish immersion)</li>
+            <li>Started college with 20+ credits </li>
+            <li>Forklift certified, worked retail 2+ years</li>
+          </ul>
+        </section>
+
         <section>
           <h2 className="text-lg font-semibold mb-4">HOBBIES:</h2>
           <ul className="list-disc list-inside space-y-1 text-black mb-4">
@@ -191,7 +216,7 @@ export default function PortfolioPage() {
               I run a bit + marathon + chasing a sub-17 5k
             </li>
             <li className="text-sm">Ran a 4:39 1600m (mile) in HS </li>
-            <li className="text-sm">Bodyweight bench press</li>
+            <li className="text-sm">150 lbs bench at 130 lbs</li>
             <li className="text-sm">
               HS varsity in 3 sports - cross country, track & field, alpine
               skiing
@@ -206,9 +231,8 @@ export default function PortfolioPage() {
               Clash Royale: 8700+ trophies (9+ years played){" "}
             </li>
             <li className="text-sm">Clash of Clans: Town Hall Level 16 </li>
-            <li className="text-sm">
-              Pokemon Go: Level 34 & Pokemon TCGP: Level 42{" "}
-            </li>
+            <li className="text-sm">Pokemon Go: Level 34 </li>
+            <li className="text-sm">Pokemon TCGP: Level 42 </li>
             <li className="text-sm">
               Rocket league: 2000+ hrs (solo queue to champ 2){" "}
             </li>
@@ -237,25 +261,24 @@ export default function PortfolioPage() {
           </ul>
         </section>
 
-        <footer className="border-t border-gray-800 pt-6">
-          <Link href="/contact">
-            <button className="text-lg cursor-pointer space-x-4 bg-sky-800 p-4 rounded-lg text-white hover:scale-105">
-              Contact
-            </button>
-          </Link>
-          <nav className="cursur-pointer text-md flex space-x-4 underline pt-4">
+        <div className="border-t border-gray-800 pt-6">
+          {" "}
+          <nav className="cursur-pointer text-md flex space-x-4 hover: underline pb-4">
             <Link
-              href="https://linktr.ee/owenomc"
+              href="https://linktr.ee/owencrandall"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black hover:text-sky-800"
             >
-              Linktree{" "}
-              <span className=""> (LinkedIn, Portfolio, X, etc.) </span>
+              Socials <span className=""> (LinkedIn, Portfolio, X, etc.) </span>
             </Link>
           </nav>
-          <p className="text-sm mt-4 text-black">OWEN CRANDALL © 2025 </p>
-        </footer>
+          <Link href="/contact">
+            <button className="text-base cursor-pointer space-x-4 bg-sky-800 px-6 py-3 rounded-3xl text-white hover:scale-102 transition">
+              Contact
+            </button>
+          </Link>
+        </div>
       </section>
     </main>
   );
