@@ -228,7 +228,7 @@ export default function PortfolioPage() {
         </section>
 
         {/* HOBBIES */}
-        <section>
+        {/* <section>
           <h2 className="text-md font-semibold mb-4">HOBBIES</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 p-6 gap-6">
             {hobbies.map((entry, i) => (
@@ -250,7 +250,7 @@ export default function PortfolioPage() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* LEADERSHIP */}
         <section>
