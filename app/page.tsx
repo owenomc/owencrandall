@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Skills from "@/app/components/Skills";
 import Image from "next/image";
 
 export default function PortfolioPage() {
@@ -15,270 +16,284 @@ export default function PortfolioPage() {
       ? 1
       : 0);
 
+  const links = [
+    {
+      href: "https://github.com/owenomc",
+      src: "/icons/github.png",
+      alt: "GitHub",
+    },
+    {
+      href: "https://www.linkedin.com/in/owen-crandall",
+      src: "/icons/linkedin.png",
+      alt: "LinkedIn",
+    },
+    {
+      href: "https://X.com/owencrandall",
+      src: "/icons/twitter.png",
+      alt: "X",
+    },
+    {
+      href: "https://mail.google.com/mail/?view=cm&to=owenmcrandall@gmail.com",
+      src: "/icons/email.png",
+      alt: "Email",
+    },
+    {
+      href: "/OwenCrandallResume2026.pdf", // <-- PDF link
+      src: "/icons/resume.png", // icon for resume
+      alt: "Resume",
+    },
+  ];
+
+  const work = [
+    {
+      name: "Shyne Bright Services LCC",
+      href: "https://shynebrightsv.com",
+      tagline: "Summer 2025 - Present",
+      description:
+        "Early-stage medical transportation startup. Built full-stack web systems including authentication, user profiles, and ride-sharing flows from Figma designs.",
+      video: "https://shynebrightsv.com", // embed link or demo video URL
+      github: "",
+    },
+  ];
+
+  const hobbies = [
+    {
+      images: ["/images/rl.png"],
+      description: "Rocket League - Champ 2",
+    },
+    {
+      images: ["/images/Start-Line_Overhead_Garry-Bjorklund-Half-Marathon.jpg"],
+      description: "Runner - Granda's Marathon 2025",
+    },
+    {
+      images: ["/images/apexlegends.jpg"],
+      description: "Apex Legends - Diamond",
+    },
+  ];
+
+  const projects = [
+    {
+      name: "Jarvis 0.1",
+      href: "https://travelpacked.vercel.app",
+      tagline: "Facial Recoginition and Detection",
+      description:
+        "Real-time voice + vision assistant with TensorFlow-powered facial recognition and object detection. Optimized for low-latency inference in the browser",
+      video: "https://travelpacked.vercel.app", // embed link or demo video URL
+      github: "",
+    },
+    {
+      name: "UPDATE",
+      href: "https://tryupdate.app",
+      tagline: "Speed Networking",
+      description:
+        "Full-stack platform with Stripe subscriptions, email automation, and user analytics. Researched monetization, legal setup, and distribution.",
+      video: "https://tryupdate.app", // embed link or demo video URL
+      github: "",
+    },
+    {
+      name: "Wealtho",
+      href: "https://wealtho.app",
+      tagline: "Personal Finance AI",
+      description:
+        "Personal finance platform replacing spreadsheets. Includes budgeting, modular income inputs, and insights calculations with API integrations.",
+      video: "https://wealtho.app", // embed link or demo video URL
+      github: "",
+    },
+    {
+      name: "SKYJUMP",
+      href: "https://oyeahkgames.vercel.app",
+      tagline: "Indie Climbing Game",
+      description:
+        "Open-source Godot 3D climbing game. Designed menus, UI, hitboxes, free assets, and fun level design.",
+      video: "https://oyeahkgames.vercel.app", // embed link or demo video URL
+      github: "",
+    },
+  ];
+
+  const leaders = [
+    {
+      images: ["/images/EagleBadge.jpg"],
+      description: "Eagle Scout",
+    },
+    {
+      images: ["/images/MNOrbitRefined.webp"],
+      description: "Website Development Lead – Bulldog Rocketry Club",
+    },
+  ];
+
   return (
-    <main className="min-h-screen bg-white text-black px-6 py-12 font-mono">
-      <section className="max-w-3xl mx-auto space-y-10">
-        {/* TITLE */}
-        <header>
-          <h1 className="text-xl font-bold">HELLO, I&apos;M OWEN CRANDALL</h1>
-          <p className="text-sm mt-2">
-            I’m {age}, from{" "}
-            <a
-              href="https://www.exploreminnesota.com/trip-planning/about-minnesota"
-              className="text-sm mt-2 text-sky-800 underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Minnesota
-            </a>
-          </p>
-          <p className="text-sm mt-2">I’ve been building for 600+ days</p>
+    <main className="min-h-screen bg-white text-black px-6 py-12">
+      <section className="max-w-4xl mx-auto space-y-6 items-center">
+        {/* HEADER */}
+        <header className="flex items-center space-x-4">
+          {/* Profile Picture */}
+          <div className="w-20 h-20 relative rounded-full overflow-hidden">
+            <Image
+              src="/profile.jpg"
+              alt="Owen Crandall Image"
+              fill
+              style={{ objectFit: "cover" }}
+            />
+          </div>
+          {/* Name and Info */}
+          <div className="space-y-1">
+            <h1 className="text-4xl font-bold tracking-tight">OWEN CRANDALL</h1>
+            <p className="text-sm">
+              AI Software Engineer | Open to Remote Roles{" "}
+            </p>
+            <p className="text-sm">{age} · Minneapolis, MN</p>
+          </div>{" "}
         </header>
 
-        {/* ABOUT */}
+        {/* EDUCATION */}
         <section>
-          <h2 className="text-md font-semibold">ABOUT:</h2>
-          <ul className="text-sm list-disc list-inside space-y-1 text-black">
-            <li>Career: Software Engineer </li>
-            <li>Major: B.S. in Computer Science </li>
-            <li>Started coding at age 17 </li>
-          </ul>
-        </section>
-
-        {/* SIDE PROJECTS */}
-        <section>
-          <h2 className="text-md font-semibold">CURRENT PROJECTS:</h2>
-          <ul className="text-sm list-disc list-inside text-black space-y-1">
-            <li>
-              <Link
-                href="https://wealtho.app"
-                className="text-sky-800 underline"
-              >
-                Wealtho
-              </Link>{" "}
-              – AI Personal Finance
-            </li>
-            <li>
-              <Link
-                href="https://tryupdate.app"
-                className="text-sky-800 underline"
-              >
-                UPDATE
-              </Link>{" "}
-              – The next generation of networking
-            </li>
-            <li>
-              <Link
-                href="https://codecurse.com"
-                className="text-sky-800 underline"
-              >
-                codecurse.com
-              </Link>{" "}
-              – Computer science course
-            </li>
-            <li>
-              <Link
-                href="https://x.com/OOLgg_"
-                className="text-sky-800 underline"
-              >
-                OOL
-              </Link>{" "}
-              – (WIP) Helping build a website for a community overwatch 2 league
-            </li>
-            <li>
-              <Link
-                href="https://s7udio.vercel.app"
-                className="text-sky-800 underline"
-              >
-                s7udio
-              </Link>{" "}
-              – (WIP) Helping build a website for a community overwatch 2 league
-            </li>
-            <li>
-              <Link
-                href="https://oyeahkgames.vercel.app"
-                className="text-sky-800 underline"
-              >
-                oyeahkgames.vercel.app
-              </Link>{" "}
-              – Indie dev, still building (2 games in progress)
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-md font-semibold">PAST PROJECTS:</h2>
-          <ul className="text-sm list-disc list-inside text-black space-y-1">
-            <li>
-              <Link
-                href="https://travlpacked.vercel.app"
-                className="text-sky-800 underline"
-              >
-                travlpacked.vercel.app
-              </Link>{" "}
-              – AI travel packing and clothing
-            </li>
-            <li>
-              FlipFin – AI personal finance education, had too large of scope
-              (may revist)
-            </li>
-            <li>
-              GetFit & LinkedOut – 2 apps developed for software engineering
-            </li>
-            <li>
-              Soul Theives – 3D soul catching game, school project I expanded on
-            </li>
-            <li>
-              ShareStrides.com – online fitness platform, first solo startup &
-              MVP, shutdown after market analysis
-            </li>
-            <li>And many more..</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2 className="text-md font-semibold">WHAT&apos;S MY DRIVE?:</h2>
-          <p className="text-sm text-black">
-            I want to build things that solve real problems. I love creativity
-            and passion.
+          <h2 className="text-md font-semibold mb-4">EDUCATION</h2>
+          <p className="text-sm font-semibold">
+            B.S. Computer Science — University of Minnesota
+          </p>
+          <p className="text-sm mb-4">
+            Graduating Spring 2026 · ABET Accredited
+          </p>
+          <p className="text-sm mb-4">
+            <span className="font-bold">Coursework:</span> Automate and Formal
+            Languages, Software Analysis, Software Engineering, Database
+            Management Systems, Computer Security, Operating Systems, Vectors
+            and Matrices
           </p>
         </section>
 
-        <details className="bg-sky-800 p-4 rounded-3xl text-white hover:scale-102 transition">
-          <summary className="text-md cursor-pointer text-white">
-            HOW I STARTED
-          </summary>
-          <p className="text-sm mt-2 text-white">Playing with legos.</p>
-          <p className="text-sm mt-2 text-white">
-            Learned some HTML/CSS/JAVASCRIPT at the end of high school.{" "}
-          </p>
-          <p className="text-sm mt-2 text-white">
-            Tried to make some 3D games. Gave up, and started web dev.
-          </p>
-          <p className="text-sm mt-2 text-white">
-            Made some awful looking websites.{" "}
-          </p>
-        </details>
+        {/* SKILLS */}
+        <Skills />
 
-        <details className="bg-sky-800 p-4 rounded-3xl text-white hover:scale-102 transition">
-          <summary className="text-md cursor-pointer ">MY GOAL</summary>
-          <p className="text-sm mt-2 text-white">Following my dreams.</p>
-          <p className="text-sm mt-2 text-white">Building for users.</p>
-          <p className="text-sm mt-2 text-white ">
-            Shipping production-ready software solo. And fast.{" "}
-          </p>
-
-          <p className="text-sm mt-2 text-white">Never giving up.</p>
-        </details>
-
-        <details className="bg-sky-800 p-4 rounded-3xl text-white hover:scale-102 transition">
-          <summary className="text-md cursor-pointer ">MY MOTIVATIONS</summary>
-          <p className="text-sm mt-2 text-white">Having too many ideas.</p>
-          <p className="text-sm mt-2 text-white">
-            Fiancial independence and freedom.
-          </p>
-          <p className="text-sm mt-2 text-white">
-            Giving back to the community.
-          </p>
-        </details>
-
-        <details className="bg-sky-800 p-4 rounded-3xl text-white hover:scale-102 transition">
-          <summary className="text-md cursor-pointer">
-            WHERE I SEE MYSELF IN 365 DAYS
-          </summary>
-          <p className="text-sm  mt-2 text-white">
-            Maybe living and working california or new york.{" "}
-          </p>
-          <p className="text-sm mt-2 text-white">
-            Leading, building & full of passion.{" "}
-          </p>
-          <p className="text-sm mt-2 text-white">Working even harder. </p>
-        </details>
-
-        {/* ACHIEVEMENTS */}
+        {/* EXPERIENCE */}
         <section>
-          <h2 className="text-lg font-semibold mb-4">ACHIEVEMENTS:</h2>
-          <ul className="text-sm list-disc list-inside space-y-1 text-black">
-            <li>Built 10+ websites since high school </li>
-            <li>Taught myself nextjs, vercel, databases, etc. </li>
-            <li>Eagle scout (highest rank in boy scouts) </li>
-            <li>Bilingual with Spanish (spanish immersion)</li>
-            <li>Started college with 20+ credits </li>
-            <li>Forklift certified, worked retail 2+ years</li>
-          </ul>
+          <h2 className="text-md font-semibold mb-4">EXPERIENCE</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {work.map((work) => (
+              <div key={work.name} className="transition-shadow">
+                <div className="flex justify-between items-center mb-2">
+                  <Link
+                    href={work.href}
+                    target="_blank"
+                    className="text-sky-800 font-semibold hover:underline"
+                  >
+                    {work.name}
+                  </Link>
+                  <span className="text-sm">{work.tagline}</span>
+                </div>
+                <p className="mb-2">{work.description}</p>
+                <div className="aspect-video w-full">
+                  <iframe
+                    src={work.video}
+                    className="w-full h-full"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
+        {/* PROJECTS */}
         <section>
-          <h2 className="text-lg font-semibold mb-4">HOBBIES:</h2>
-          <ul className="list-disc list-inside space-y-1 text-black mb-4">
-            <p className="text-md font-semibold"> Sports</p>
-            <li className="text-sm">
-              I run a bit + marathon + chasing a sub-17 5k
-            </li>
-            <li className="text-sm">Ran a 4:39 1600m (mile) in HS </li>
-            <li className="text-sm">150 lbs bench at 130 lbs</li>
-            <li className="text-sm">
-              HS varsity in 3 sports - cross country, track & field, alpine
-              skiing
-            </li>
-            <li className="text-sm">
-              Growing up I also played - baseball, soccer, tennis
-            </li>
-          </ul>
-          <ul className="list-disc list-inside space-y-1 text-black">
-            <p className="text-md font-semibold"> Gaming</p>
-            <li className="text-sm">
-              Clash Royale: 8700+ trophies (9+ years played){" "}
-            </li>
-            <li className="text-sm">Clash of Clans: Town Hall Level 16 </li>
-            <li className="text-sm">Pokemon Go: Level 34 </li>
-            <li className="text-sm">Pokemon TCGP: Level 42 </li>
-            <li className="text-sm">
-              Rocket league: 2000+ hrs (solo queue to champ 2){" "}
-            </li>
-            <li className="text-sm">
-              Fortnite: 1500+ hrs (season 2 to season X){" "}
-            </li>
-            <li className="text-sm">Apex legends: 500+ hrs (diamond) </li>
-            <li className="text-sm">Valorant: 400+ hrs (gold) </li>
-          </ul>
+          <h2 className="text-md font-semibold mb-2">PROJECTS</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projects.map((project) => (
+              <div key={project.name} className="p-4 transition-shadow">
+                <div className="flex justify-between items-center mb-2">
+                  <Link
+                    href={project.href}
+                    target="_blank"
+                    className="text-sky-800 font-semibold hover:underline"
+                  >
+                    {project.name}
+                  </Link>
+                  <span className="text-gray-600 text-sm">
+                    {project.tagline}
+                  </span>
+                </div>
+                <p className="mb-2">{project.description}</p>
+                <div className="aspect-video w-full">
+                  <iframe
+                    src={project.video}
+                    className="w-full h-full rounded-md"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
+        {/* HOBBIES */}
         <section>
-          <h2 className="text-md font-semibold">ARTICLES:</h2>
-          <ul className="text-sm list-disc list-inside text-black space-y-1">
-            <li>
-              Article I wrote –{" "}
-              <a
-                href="https://medium.com/@owencrandall/a-guide-to-website-development-540a1b3285c3"
-                className="text-sky-800 underline"
-                target="_blank"
-                rel="noopener noreferrer"
+          <h2 className="text-md font-semibold mb-4">HOBBIES</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 p-6 gap-6">
+            {hobbies.map((entry, i) => (
+              <div
+                key={i}
+                className="flex flex-col items-center justify-items-center"
               >
-                A Guide To Website Development
-              </a>
-            </li>
-          </ul>
+                <p className="text-sm text-center mb-4">{entry.description}</p>
+                {entry.images.map((src, j) => (
+                  <Image
+                    key={j}
+                    src={src}
+                    alt="Badge"
+                    width={126}
+                    height={126}
+                    className="rounded-md"
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
         </section>
 
-        <div className="border-t border-gray-800 pt-6">
-          {" "}
-          <nav className="cursur-pointer text-md flex space-x-4 hover: underline pb-4">
-            <Link
-              href="https://linktr.ee/owencrandall"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-black hover:text-sky-800"
-            >
-              Socials <span className=""> (LinkedIn, Portfolio, X, etc.) </span>
-            </Link>
-          </nav>
-          <Link href="/contact">
-            <button className="text-base cursor-pointer space-x-4 bg-sky-800 px-6 py-3 rounded-3xl text-white hover:scale-102 transition">
-              Contact
-            </button>
-          </Link>
-        </div>
+        {/* LEADERSHIP */}
+        <section>
+          <h2 className="text-md font-semibold mb-4">LEADERSHIP</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 p-6 gap-6">
+            {leaders.map((entry, i) => (
+              <div key={i} className="flex flex-col items-center">
+                <p className="text-sm text-center mb-4">{entry.description}</p>
+                {entry.images.map((src, j) => (
+                  <Image
+                    key={j}
+                    src={src}
+                    alt="Badge"
+                    width={64}
+                    height={64}
+                    className="rounded-md"
+                  />
+                ))}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="border-t border-gray-300 pt-6 text-sm">
+          <div className="flex items-center gap-2 pt-2 text-sm">
+            {links.map((link, i) => (
+              <div key={link.href} className="flex items-center gap-2">
+                <Link
+                  href={link.href}
+                  target="_blank"
+                  className="hover:opacity-80"
+                >
+                  <Image src={link.src} alt={link.alt} width={36} height={36} />
+                </Link>
+                {/* Add X separator if not the last item */}
+                {i !== links.length - 1 && (
+                  <span className="text-gray-400">×</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </footer>
       </section>
     </main>
   );
