@@ -28,7 +28,7 @@ export default function Skills() {
                 alt={icon}
                 width={64}
                 height={64}
-                className="transition bg-black"
+                className="transition"
               />
             ))
           )}

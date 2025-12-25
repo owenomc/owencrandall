@@ -73,12 +73,12 @@ export default function PortfolioPage() {
 
   const projects = [
     {
-      name: "Jarvis 0.1",
-      href: "https://travelpacked.vercel.app",
-      tagline: "Facial Recoginition and Detection",
+      name: "Wealtho",
+      href: "https://wealtho.app",
+      tagline: "Personal Finance AI",
       description:
-        "Real-time voice + vision assistant with TensorFlow-powered facial recognition and object detection. Optimized for low-latency inference in the browser",
-      video: "https://travelpacked.vercel.app", // embed link or demo video URL
+        "Personal finance platform replacing spreadsheets. Includes budgeting, modular income inputs, and insights calculations with API integrations.",
+      video: "https://wealtho.app", // embed link or demo video URL
       github: "",
     },
     {
@@ -91,20 +91,29 @@ export default function PortfolioPage() {
       github: "",
     },
     {
-      name: "Wealtho",
-      href: "https://wealtho.app",
-      tagline: "Personal Finance AI",
+      name: "K'Boys Kare",
+      href: "https://www.kboyskare.com",
+      tagline: "Non-profit Organization",
       description:
-        "Personal finance platform replacing spreadsheets. Includes budgeting, modular income inputs, and insights calculations with API integrations.",
-      video: "https://wealtho.app", // embed link or demo video URL
+        "To help make cardiac transplant kids' hospital stays be a little brighter, happier and more enjoyable! Provided from Heart Warriors to Heart Warriors.",
+      video: "https://www.kboyskare.com", // embed link or demo video URL
       github: "",
     },
     {
-      name: "SKYJUMP",
+      name: "Jarvis 0.1",
+      href: "https://travelpacked.vercel.app",
+      tagline: "Facial Recoginition and Detection",
+      description:
+        "Real-time voice + vision assistant with TensorFlow-powered facial recognition and object detection. Optimized for low-latency inference in the browser",
+      video: "https://travelpacked.vercel.app", // embed link or demo video URL
+      github: "",
+    },
+    {
+      name: "Skyjump",
       href: "https://oyeahkgames.vercel.app",
       tagline: "Indie Climbing Game",
       description:
-        "Open-source Godot 3D climbing game. Designed menus, UI, hitboxes, free assets, and fun level design.",
+        "Open-source Godot 3D climbing game. Designed menus, UI, hitboxes, free assets, and level design.",
       video: "https://oyeahkgames.vercel.app", // embed link or demo video URL
       github: "",
     },
@@ -127,7 +136,7 @@ export default function PortfolioPage() {
         {/* HEADER */}
         <header className="flex items-center space-x-4">
           {/* Profile Picture */}
-          <div className="w-20 h-20 relative rounded-full overflow-hidden">
+          <div className="w-22 h-22 relative rounded-full overflow-hidden">
             <Image
               src="/profile.jpg"
               alt="Owen Crandall Image"
@@ -137,10 +146,10 @@ export default function PortfolioPage() {
           </div>
           {/* Name and Info */}
           <div className="space-y-1">
-            <h1 className="text-4xl font-bold tracking-tight">OWEN CRANDALL</h1>
-            <p className="text-sm">
-              AI Software Engineer | Open to Remote Roles{" "}
-            </p>
+            <h1 className="text-2xl md:text-4xl font-bold tracking-tight">
+              OWEN CRANDALL
+            </h1>
+            <p className="text-base">AI Software Engineer </p>
             <p className="text-sm">{age} · Minneapolis, MN</p>
           </div>{" "}
         </header>
@@ -179,7 +188,7 @@ export default function PortfolioPage() {
                   >
                     {work.name}
                   </Link>
-                  <span className="text-sm">{work.tagline}</span>
+                  <span className="text-gray-600 text-sm">{work.tagline}</span>
                 </div>
                 <p className="mb-2">{work.description}</p>
                 <div className="aspect-video w-full">
