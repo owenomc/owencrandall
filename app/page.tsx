@@ -54,6 +54,15 @@ export default function PortfolioPage() {
       video: "https://shynebrightsv.com", // embed link or demo video URL
       github: "",
     },
+    {
+      name: "K'Boys Kare",
+      href: "https://kboyskare.com",
+      tagline: "Non-profit Organization",
+      description:
+        "To help make cardiac transplant kids' hospital stays be a little brighter, happier and more enjoyable! Provided from Heart Warriors to Heart Warriors.",
+      video: "https://kboyskare.com", // embed link or demo video URL
+      github: "",
+    },
   ];
 
   const hobbies = [
@@ -91,21 +100,12 @@ export default function PortfolioPage() {
       github: "",
     },
     {
-      name: "K'Boys Kare",
-      href: "https://www.kboyskare.com",
-      tagline: "Non-profit Organization",
-      description:
-        "To help make cardiac transplant kids' hospital stays be a little brighter, happier and more enjoyable! Provided from Heart Warriors to Heart Warriors.",
-      video: "https://www.kboyskare.com", // embed link or demo video URL
-      github: "",
-    },
-    {
-      name: "Jarvis 0.1",
-      href: "https://travelpacked.vercel.app",
-      tagline: "Facial Recoginition and Detection",
+      name: "Jarvis",
+      href: "https://owenomc-jarvis.vercel.app",
+      tagline: "Facial Recoginition & Speech Detection",
       description:
         "Real-time voice + vision assistant with TensorFlow-powered facial recognition and object detection. Optimized for low-latency inference in the browser",
-      video: "https://travelpacked.vercel.app", // embed link or demo video URL
+      video: "https://owenomc-jarvis.vercel.app", // embed link or demo video URL
       github: "",
     },
     {
