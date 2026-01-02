@@ -164,7 +164,7 @@ export default function PortfolioPage() {
             Graduating Spring 2026 · ABET Accredited
           </p>
           <p className="text-sm mb-4">
-            <span className="font-bold">Coursework:</span> Automate and Formal
+            <span className="font-bold">Coursework:</span> Automata and Formal
             Languages, Software Analysis, Software Engineering, Database
             Management Systems, Computer Security, Operating Systems, Vectors
             and Matrices
