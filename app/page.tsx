@@ -46,7 +46,7 @@ export default function PortfolioPage() {
 
   const work = [
     {
-      name: "Shyne Bright Services LCC",
+      name: "Shyne Bright Services LLC",
       href: "https://shynebrightsv.com",
       tagline: "Summer 2025 - Present",
       description:
@@ -57,7 +57,7 @@ export default function PortfolioPage() {
     {
       name: "K'Boys Kare",
       href: "https://kboyskare.com",
-      tagline: "Non-profit Organization",
+      tagline: "Non-Profit Organization",
       description:
         "To help make cardiac transplant kids' hospital stays be a little brighter, happier and more enjoyable! Provided from Heart Warriors to Heart Warriors.",
       video: "https://kboyskare.com", // embed link or demo video URL
@@ -92,11 +92,11 @@ export default function PortfolioPage() {
     },
     {
       name: "UPDATE",
-      href: "https://tryupdate.app",
+      href: "https://tryupdate.app/",
       tagline: "Speed Networking",
       description:
         "Full-stack platform with Stripe subscriptions, email automation, and user analytics. Researched monetization, legal setup, and distribution.",
-      video: "https://tryupdate.app", // embed link or demo video URL
+      video: "https://tryupdate.app/", // embed link or demo video URL
       github: "",
     },
     {
@@ -104,7 +104,7 @@ export default function PortfolioPage() {
       href: "https://owenomc-jarvis.vercel.app",
       tagline: "Facial Recoginition & Speech Detection",
       description:
-        "Real-time voice + vision assistant with TensorFlow-powered facial recognition and object detection. Optimized for low-latency inference in the browser",
+        "Real-time voice + vision assistant with TensorFlow-powered facial recognition and object detection.",
       video: "https://owenomc-jarvis.vercel.app", // embed link or demo video URL
       github: "",
     },
@@ -149,7 +149,7 @@ export default function PortfolioPage() {
             <h1 className="text-2xl md:text-4xl font-bold tracking-tight">
               OWEN CRANDALL
             </h1>
-            <p className="text-base">AI Software Engineer </p>
+            <p className="text-base">Software Engineer </p>
             <p className="text-sm">{age} · Minneapolis, MN</p>
           </div>{" "}
         </header>
