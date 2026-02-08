@@ -86,7 +86,7 @@ export default function PortfolioPage() {
       href: "https://wealtho.app",
       tagline: "Personal Finance AI",
       description:
-        "Personal finance platform replacing spreadsheets. Includes budgeting, modular income inputs, and insights calculations with API integrations.",
+        "AI-powered financial insights using API-driven services and structured data.",
       video: "https://wealtho.app", // embed link or demo video URL
       github: "",
     },
