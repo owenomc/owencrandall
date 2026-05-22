@@ -91,15 +91,6 @@ export default function PortfolioPage() {
       github: "",
     },
     {
-      name: "UPDATE",
-      href: "https://tryupdate.app/",
-      tagline: "Speed Networking",
-      description:
-        "Full-stack platform with Stripe subscriptions, email automation, and user analytics. Researched monetization, legal setup, and distribution.",
-      video: "https://tryupdate.app/", // embed link or demo video URL
-      github: "",
-    },
-    {
       name: "Jarvis",
       href: "https://owenomc-jarvis.vercel.app",
       tagline: "Facial Recoginition & Speech Detection",
@@ -138,7 +129,7 @@ export default function PortfolioPage() {
           {/* Profile Picture */}
           <div className="w-22 h-22 relative rounded-full overflow-hidden">
             <Image
-              src="/profile.jpg"
+              src="/profileLAX.jpeg"
               alt="Owen Crandall Image"
               fill
               style={{ objectFit: "cover" }}
