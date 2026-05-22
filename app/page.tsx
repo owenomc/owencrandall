@@ -129,7 +129,7 @@ export default function PortfolioPage() {
           {/* Profile Picture */}
           <div className="w-22 h-22 relative rounded-full overflow-hidden">
             <Image
-              src="/profileLAX.jpeg"
+              src="/pfp.jpeg"
               alt="Owen Crandall Image"
               fill
               style={{ objectFit: "cover" }}
