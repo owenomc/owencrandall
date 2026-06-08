@@ -51,23 +51,23 @@ export default function Page() {
       role: "Software Engineer",
       date: "June 2025 – Jan 2026",
       description:
-        "Built authentication, dashboards, ride scheduling systems, user profiles, and transportation workflows.",
+        "Early stage startup. Built authentication, dashboards, ride scheduling systems, user profiles, and transportation workflows.",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <main className="min-h-screen bg-gray-100">
+      <div className="max-w-6xl mx-auto px-10">
         {/* HERO */}
-        <section className="py-24">
+        <section className="pt-50 py-12">
           <div className="flex flex-col md:flex-row items-center gap-12">
             {/* IMAGE LEFT */}
             <Image
               src="/profileLAX.jpg"
               alt="Owen Crandall"
-              width={164}
-              height={164}
-              className="rounded-full object-cover border border-gray-300"
+              width={180}
+              height={180}
+              className="rounded-full object-cover"
             />
 
             {/* TEXT RIGHT */}
@@ -78,6 +78,15 @@ export default function Page() {
               <p className="mt-4 text-2xl text-slate-600 max-w-2xl leading-relaxed">
                 Software Engineer • Minneapolis, MN
               </p>{" "}
+              <div className="flex flex-wrap gap-4 mt-8">
+                <Link
+                  href="/OwenCrandallResume2026.pdf"
+                  target="_blank"
+                  className="bg-white px-6 py-3 shadow-md rounded-xl font-medium hover:bg-slate-50"
+                >
+                  Resume
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -95,23 +104,16 @@ export default function Page() {
           </p>
           {/* QUICK LINKS */}
           <section className="py-12 grid md:grid-cols-2 gap-8">
-            <div className="border border-gray-300 rounded-3xl p-8">
+            <div className="bg-white shadow-md rounded-3xl p-8">
               <Devs />
             </div>
-
-            <div className="border border-gray-300 rounded-3xl p-8">
+            <div className="bg-white shadow-md rounded-3xl p-8">
               <Socials />
             </div>
           </section>{" "}
-          <p className="text-xl text-slate-600 max-w-2xl leading-relaxed">
-            <Link
-              href="/OwenCrandallResume2026.pdf"
-              target="_blank"
-              className="text-lg border border-gray-300 px-6 py-3 text-black rounded-xl font-medium transition"
-            >
-              Resume
-            </Link>{" "}
-          </p>
+          <div className="bg-white shadow-md rounded-3xl p-8">
+            <Skills />
+          </div>
         </section>
 
         {/* EDUCATION */}
@@ -122,7 +124,7 @@ export default function Page() {
             {education.map((edu) => (
               <div
                 key={edu.school}
-                className="border border-gray-300 rounded-3xl p-8"
+                className="bg-white shadow-md rounded-3xl p-8"
               >
                 <div className="flex flex-col md:flex-row md:justify-between">
                   <div>
@@ -144,10 +146,6 @@ export default function Page() {
           </div>
         </section>
 
-        <div className="border border-gray-300 rounded-3xl p-8">
-          <Skills />
-        </div>
-
         {/* EXPERIENCE */}
         <section className="py-12">
           <h2 className="text-4xl font-bold text-slate-900 mb-12">
@@ -158,7 +156,7 @@ export default function Page() {
             {experience.map((job) => (
               <div
                 key={job.company}
-                className="border border-gray-300 rounded-3xl p-8"
+                className="bg-white shadow-md rounded-3xl p-8"
               >
                 <div className="flex flex-col md:flex-row md:justify-between">
                   <div>
@@ -194,7 +192,7 @@ export default function Page() {
                 target="_blank"
                 className="group"
               >
-                <div className="border border-gray-300 rounded-3xl overflow-hidden transition">
+                <div className="bg-white shadow-md rounded-3xl overflow-hidden transition">
                   <div className="aspect-video bg-slate-100 overflow-hidden">
                     <iframe
                       src={project.href}
@@ -222,8 +220,9 @@ export default function Page() {
             ))}
           </div>
         </section>
+
         {/* FOOTER */}
-        <section className="py-24 text-center border-t">
+        <section className="pb-50 py-24 text-center">
           <h2 className="text-5xl font-bold text-slate-900">
             Let&apos;s Build Something
           </h2>
