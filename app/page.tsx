@@ -34,15 +34,7 @@ export default function Page() {
       image: "/projects/wealtho.png",
       description:
         "Building a gamified finance platform designed to help users improve financial habits through AI-powered insights.",
-    },
-    {
-      name: "BridgeAds",
-      tagline: "Infrastructure Sponsorship Marketplace",
-      href: "https://bridgeads-test.vercel.app",
-      image: "/projects/bridgeads.png",
-      description:
-        "A marketplace connecting sponsors with infrastructure and community projects.",
-    },
+    }
   ];
 
   const experience = [
