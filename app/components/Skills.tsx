@@ -3,34 +3,33 @@
 import Image from "next/image";
 
 const skills = [
-  "typescript/typescript-original",
-  "javascript/javascript-original",
-  "react/react-original",
-  "nextjs/nextjs-original",
-  "nodejs/nodejs-original",
-  "firebase/firebase-plain",
-  "postgresql/postgresql-original",
-  "python/python-original",
+  "typescript",
+  "react",
+  "nextjs",
+  "nodejs",
+  "firebase",
+  "python",
 ];
 
 export default function Skills() {
   return (
     <section>
-      <h2 className="text-md font-semibold mb-3">TECHNICAL SKILLS</h2>
+      <h2 className="text-lg font-semibold">SKILLS</h2>
+      <p className="text-sm text-gray-500 mb-3">Coding languages and tools</p>
 
       <div className="overflow-hidden">
         <div className="flex gap-10 animate-marquee items-center">
           {[0, 1].flatMap((loopIndex) =>
-            skills.map((icon, skillIndex) => (
+            skills.map((skill, skillIndex) => (
               <Image
-                key={`${loopIndex}-${icon}-${skillIndex}`}
-                src={`https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/${icon}.svg`}
-                alt={icon}
-                width={64}
-                height={64}
+                key={`${loopIndex}-${skill}-${skillIndex}`}
+                src={`/logos/${skill}.png`}
+                alt={skill}
+                width={40}
+                height={40}
                 className="transition"
               />
-            ))
+            )),
           )}
         </div>
       </div>

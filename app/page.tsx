@@ -1,300 +1,248 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
-import Skills from "@/app/components/Skills";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function PortfolioPage() {
-  const birthDate = new Date("2005-06-02");
-  const today = new Date();
-  const age =
-    today.getFullYear() -
-    birthDate.getFullYear() -
-    (today <
-    new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate())
-      ? 1
-      : 0);
+import Skills from "@/app/components/Skills";
+import Socials from "@/app/components/Socials";
+import Devs from "@/app/components/Devs";
 
-  const links = [
+export default function Page() {
+  const education = [
     {
-      href: "https://github.com/owenomc",
-      src: "/icons/github.png",
-      alt: "GitHub",
-    },
-    {
-      href: "https://www.linkedin.com/in/owen-crandall",
-      src: "/icons/linkedin.png",
-      alt: "LinkedIn",
-    },
-    {
-      href: "https://X.com/owencrandall",
-      src: "/icons/twitter.png",
-      alt: "X",
-    },
-    {
-      href: "https://mail.google.com/mail/?view=cm&to=owenmcrandall@gmail.com",
-      src: "/icons/email.png",
-      alt: "Email",
-    },
-    {
-      href: "/OwenCrandallResume2026.pdf", // <-- PDF link
-      src: "/icons/resume.png", // icon for resume
-      alt: "Resume",
-    },
-  ];
-
-  const work = [
-    {
-      name: "Shyne Bright Services LLC",
-      href: "https://shynebrightsv.com",
-      tagline: "Summer 2025 - Present",
+      school: "University of Minnesota Duluth",
+      degree: "B.S. Computer Science",
+      date: "2023 – 2026",
       description:
-        "Early-stage medical transportation startup. Built full-stack web systems including authentication, user profiles, and ride-sharing flows from Figma designs.",
-      video: "https://shynebrightsv.com", // embed link or demo video URL
-      github: "",
-    },
-    {
-      name: "K'Boys Kare",
-      href: "https://kboyskare.com",
-      tagline: "Non-Profit Organization",
-      description:
-        "To help make cardiac transplant kids' hospital stays be a little brighter, happier and more enjoyable! Provided from Heart Warriors to Heart Warriors.",
-      video: "https://kboyskare.com", // embed link or demo video URL
-      github: "",
-    },
-  ];
-
-  const hobbies = [
-    {
-      images: ["/images/rl.png"],
-      description: "Rocket League - Champ 2",
-    },
-    {
-      images: ["/images/Start-Line_Overhead_Garry-Bjorklund-Half-Marathon.jpg"],
-      description: "Runner - Granda's Marathon 2025",
-    },
-    {
-      images: ["/images/apexlegends.jpg"],
-      description: "Apex Legends - Diamond",
+        "ABET Accredited • Artificial Intelligence, Computer Security, Database Systems, Operating Systems, Software Engineering, Mobile UX Design, and Automata & Formal Languages.",
     },
   ];
 
   const projects = [
     {
+      name: "K'Boys Kare",
+      tagline: "Nonprofit",
+      href: "https://kboyskare.com",
+      image: "/projects/kboyskare.png",
+      description:
+        "Developed and maintained nonprofit web experiences supporting outreach and fundraising.",
+    },
+    {
       name: "Wealtho",
+      tagline: "AI Personal Finance Platform",
       href: "https://wealtho.app",
-      tagline: "Personal Finance AI",
+      image: "/projects/wealtho.png",
       description:
-        "AI-powered financial insights using API-driven services and structured data.",
-      video: "https://wealtho.app", // embed link or demo video URL
-      github: "",
+        "Building a gamified finance platform designed to help users improve financial habits through AI-powered insights.",
     },
     {
-      name: "Jarvis",
-      href: "https://owenomc-jarvis.vercel.app",
-      tagline: "Facial Recoginition & Speech Detection",
+      name: "BridgeAds",
+      tagline: "Infrastructure Sponsorship Marketplace",
+      href: "https://bridgeads-test.vercel.app",
+      image: "/projects/bridgeads.png",
       description:
-        "Real-time voice + vision assistant with TensorFlow-powered facial recognition and object detection.",
-      video: "https://owenomc-jarvis.vercel.app", // embed link or demo video URL
-      github: "",
-    },
-    {
-      name: "Skyjump",
-      href: "https://oyeahkgames.vercel.app",
-      tagline: "Indie Climbing Game",
-      description:
-        "Open-source Godot 3D climbing game. Designed menus, UI, hitboxes, free assets, and level design.",
-      video: "https://oyeahkgames.vercel.app", // embed link or demo video URL
-      github: "",
+        "A marketplace connecting sponsors with infrastructure and community projects.",
     },
   ];
 
-  const leaders = [
+  const experience = [
     {
-      images: ["/images/EagleBadge.jpg"],
-      description: "Eagle Scout",
-    },
-    {
-      images: ["/images/MNOrbitRefined.webp"],
-      description: "Website Development Lead – Bulldog Rocketry Club",
+      company: "Shyne Bright Services LLC",
+      role: "Software Engineer",
+      date: "June 2025 – Jan 2026",
+      description:
+        "Built authentication, dashboards, ride scheduling systems, user profiles, and transportation workflows.",
     },
   ];
 
   return (
-    <main className="min-h-screen bg-white text-black px-6 py-12">
-      <section className="max-w-4xl mx-auto space-y-6 items-center">
-        {/* HEADER */}
-        <header className="flex items-center space-x-4">
-          {/* Profile Picture */}
-          <div className="w-22 h-22 relative rounded-full overflow-hidden">
+    <main className="min-h-screen bg-white">
+      <div className="max-w-6xl mx-auto px-6">
+        {/* HERO */}
+        <section className="py-24">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            {/* IMAGE LEFT */}
             <Image
-              src="/pfp.jpeg"
-              alt="Owen Crandall Image"
-              fill
-              style={{ objectFit: "cover" }}
+              src="/profileLAX.jpg"
+              alt="Owen Crandall"
+              width={164}
+              height={164}
+              className="rounded-full object-cover border border-gray-300"
             />
-          </div>
-          {/* Name and Info */}
-          <div className="space-y-1">
-            <h1 className="text-2xl md:text-4xl font-bold tracking-tight">
-              OWEN CRANDALL
-            </h1>
-            <p className="text-base">Software Engineer </p>
-            <p className="text-sm">{age} · Minneapolis, MN</p>
-          </div>{" "}
-        </header>
 
-        {/* EDUCATION */}
-        <section>
-          <h2 className="text-md font-semibold mb-4">EDUCATION</h2>
-          <p className="text-sm font-semibold">
-            B.S. Computer Science — University of Minnesota
+            {/* TEXT RIGHT */}
+            <div>
+              <h1 className="mt-4 text-6xl md:text-7xl font-black text-slate-900">
+                Owen Crandall
+              </h1>
+              <p className="mt-4 text-2xl text-slate-600 max-w-2xl leading-relaxed">
+                Software Engineer • Minneapolis, MN
+              </p>{" "}
+            </div>
+          </div>
+        </section>
+
+        {/* ABOUT */}
+        <section className="py-12">
+          <h2 className="text-4xl font-bold text-slate-900 mb-8">About</h2>
+          <p className="max-w-4xl text-lg text-slate-600 leading-9">
+            Computer Science graduate and software engineer with experience
+            building startups, AI-powered products, mobile applications, and
+            full-stack web platforms. I enjoy taking ideas from concept to
+            production, designing intuitive user experiences, and developing
+            scalable systems that solve real-world problems. My work
+            concentrates on creating products people genuinely enjoy using.
           </p>
-          <p className="text-sm mb-4">
-            Graduating Spring 2026 · ABET Accredited
-          </p>
-          <p className="text-sm mb-4">
-            <span className="font-bold">Coursework:</span> Automata and Formal
-            Languages, Software Analysis, Software Engineering, Database
-            Management Systems, Computer Security, Operating Systems, Vectors
-            and Matrices
+          {/* QUICK LINKS */}
+          <section className="py-12 grid md:grid-cols-2 gap-8">
+            <div className="border border-gray-300 rounded-3xl p-8">
+              <Devs />
+            </div>
+
+            <div className="border border-gray-300 rounded-3xl p-8">
+              <Socials />
+            </div>
+          </section>{" "}
+          <p className="text-xl text-slate-600 max-w-2xl leading-relaxed">
+            <Link
+              href="/OwenCrandallResume2026.pdf"
+              target="_blank"
+              className="text-lg border border-gray-300 px-6 py-3 text-black rounded-xl font-medium transition"
+            >
+              Resume
+            </Link>{" "}
           </p>
         </section>
 
-        {/* SKILLS */}
-        <Skills />
+        {/* EDUCATION */}
+        <section className="py-12">
+          <h2 className="text-4xl font-bold text-slate-900 mb-12">Education</h2>
+
+          <div className="space-y-8">
+            {education.map((edu) => (
+              <div
+                key={edu.school}
+                className="border border-gray-300 rounded-3xl p-8"
+              >
+                <div className="flex flex-col md:flex-row md:justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold text-slate-900">
+                      {edu.degree}
+                    </h3>
+
+                    <p className="text-slate-500 mt-1">{edu.school}</p>
+                  </div>
+
+                  <p className="text-slate-500 mt-2 md:mt-0">{edu.date}</p>
+                </div>
+
+                <p className="mt-6 text-slate-600 leading-8">
+                  {edu.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="border border-gray-300 rounded-3xl p-8">
+          <Skills />
+        </div>
 
         {/* EXPERIENCE */}
-        <section>
-          <h2 className="text-md font-semibold mb-4">EXPERIENCE</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {work.map((work) => (
-              <div key={work.name} className="transition-shadow">
-                <div className="flex justify-between items-center mb-2">
-                  <Link
-                    href={work.href}
-                    target="_blank"
-                    className="text-sky-800 font-semibold hover:underline"
-                  >
-                    {work.name}
-                  </Link>
-                  <span className="text-gray-600 text-sm">{work.tagline}</span>
+        <section className="py-12">
+          <h2 className="text-4xl font-bold text-slate-900 mb-12">
+            Experience
+          </h2>
+
+          <div className="space-y-8">
+            {experience.map((job) => (
+              <div
+                key={job.company}
+                className="border border-gray-300 rounded-3xl p-8"
+              >
+                <div className="flex flex-col md:flex-row md:justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold text-slate-900">
+                      {job.role}
+                    </h3>
+
+                    <p className="text-slate-500 mt-1">{job.company}</p>
+                  </div>
+
+                  <p className="text-slate-500 mt-2 md:mt-0">{job.date}</p>
                 </div>
-                <p className="mb-2">{work.description}</p>
-                <div className="aspect-video w-full">
-                  <iframe
-                    src={work.video}
-                    className="w-full h-full"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                  />
-                </div>
+
+                <p className="mt-6 text-slate-600 leading-8">
+                  {job.description}
+                </p>
               </div>
             ))}
           </div>
         </section>
 
         {/* PROJECTS */}
-        <section>
-          <h2 className="text-md font-semibold mb-2">PROJECTS</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section className="py-12">
+          <h2 className="text-4xl font-bold text-slate-900 mb-12">
+            Featured Projects
+          </h2>
+
+          <div className="grid gap-10">
             {projects.map((project) => (
-              <div key={project.name} className="p-4 transition-shadow">
-                <div className="flex justify-between items-center mb-2">
-                  <Link
-                    href={project.href}
-                    target="_blank"
-                    className="text-sky-800 font-semibold hover:underline"
-                  >
-                    {project.name}
-                  </Link>
-                  <span className="text-gray-600 text-sm">
-                    {project.tagline}
-                  </span>
-                </div>
-                <p className="mb-2">{project.description}</p>
-                <div className="aspect-video w-full">
-                  <iframe
-                    src={project.video}
-                    className="w-full h-full rounded-md"
-                    allow="autoplay; encrypted-media"
-                    allowFullScreen
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* HOBBIES */}
-        {/* <section>
-          <h2 className="text-md font-semibold mb-4">HOBBIES</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 p-6 gap-6">
-            {hobbies.map((entry, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center justify-items-center"
+              <Link
+                key={project.name}
+                href={project.href}
+                target="_blank"
+                className="group"
               >
-                <p className="text-sm text-center mb-4">{entry.description}</p>
-                {entry.images.map((src, j) => (
-                  <Image
-                    key={j}
-                    src={src}
-                    alt="Badge"
-                    width={126}
-                    height={126}
-                    className="rounded-md"
-                  />
-                ))}
-              </div>
-            ))}
-          </div>
-        </section> */}
+                <div className="border border-gray-300 rounded-3xl overflow-hidden transition">
+                  <div className="aspect-video bg-slate-100 overflow-hidden">
+                    <iframe
+                      src={project.href}
+                      title={project.name}
+                      className="w-full h-full"
+                      loading="lazy"
+                    />
+                  </div>
 
-        {/* LEADERSHIP */}
-        <section>
-          <h2 className="text-md font-semibold mb-4">LEADERSHIP</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 p-6 gap-6">
-            {leaders.map((entry, i) => (
-              <div key={i} className="flex flex-col items-center">
-                <p className="text-sm text-center mb-4">{entry.description}</p>
-                {entry.images.map((src, j) => (
-                  <Image
-                    key={j}
-                    src={src}
-                    alt="Badge"
-                    width={64}
-                    height={64}
-                    className="rounded-md"
-                  />
-                ))}
-              </div>
+                  <div className="p-8">
+                    <h3 className="text-3xl font-bold text-slate-900">
+                      {project.name}
+                    </h3>
+
+                    <p className="text-slate-500 font-medium mt-2">
+                      {project.tagline}
+                    </p>
+
+                    <p className="mt-4 text-slate-600 leading-8">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
-
         {/* FOOTER */}
-        <footer className="border-t border-gray-300 pt-6 text-sm">
-          <div className="flex items-center gap-2 pt-2 text-sm">
-            {links.map((link, i) => (
-              <div key={link.href} className="flex items-center gap-2">
-                <Link
-                  href={link.href}
-                  target="_blank"
-                  className="hover:opacity-80"
-                >
-                  <Image src={link.src} alt={link.alt} width={36} height={36} />
-                </Link>
-                {/* Add X separator if not the last item */}
-                {i !== links.length - 1 && (
-                  <span className="text-gray-400">×</span>
-                )}
-              </div>
-            ))}
-          </div>
-        </footer>
-      </section>
+        <section className="py-24 text-center border-t">
+          <h2 className="text-5xl font-bold text-slate-900">
+            Let&apos;s Build Something
+          </h2>
+
+          <p className="text-slate-600 mt-4">
+            Open to software engineering opportunities, startups, and ambitious
+            projects.
+          </p>
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=owenmcrandall@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-8 text-xl font-semibold text-blue-600 hover:underline"
+          >
+            owenmcrandall@gmail.com
+          </a>
+        </section>
+      </div>
     </main>
   );
 }
