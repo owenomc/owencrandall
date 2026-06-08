@@ -3,12 +3,12 @@
 import Image from "next/image";
 
 const skills = [
-  "typescript",
-  "react",
-  "nextjs",
-  "nodejs",
-  "firebase",
-  "python",
+  "TypeScript",
+  "React",
+  "Nextjs",
+  "Nodejs",
+  "Firebase",
+  "Python",
 ];
 
 export default function Skills() {
