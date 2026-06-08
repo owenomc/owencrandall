@@ -72,10 +72,10 @@ export default function Page() {
 
             {/* TEXT RIGHT */}
             <div>
-              <h1 className="mt-4 text-6xl md:text-7xl font-black text-slate-900">
+              <h1 className="mt-4 text-4xl md:text-7xl font-black text-slate-900">
                 Owen Crandall
               </h1>
-              <p className="mt-4 text-2xl text-slate-600 max-w-2xl leading-relaxed">
+              <p className="mt-4 text-base md:text-2xl text-slate-600 max-w-2xl leading-relaxed">
                 Software Engineer • Minneapolis, MN
               </p>{" "}
               <div className="flex flex-wrap gap-4 mt-8">
@@ -236,7 +236,7 @@ export default function Page() {
             href="https://mail.google.com/mail/?view=cm&to=owenmcrandall@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block mt-8 text-xl font-semibold text-blue-600 hover:underline"
+            className="text-base md:text-xl bg-white inline-block shadow-md py-3 rounded-xl px-6 mt-8 font-semibold hover:scale-105 transition"
           >
             owenmcrandall@gmail.com
           </a>

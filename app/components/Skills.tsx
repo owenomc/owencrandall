@@ -23,7 +23,7 @@ export default function Skills() {
             skills.map((skill, skillIndex) => (
               <Image
                 key={`${loopIndex}-${skill}-${skillIndex}`}
-                src={`/logos/${skill}.png`}
+                src={`/skills/${skill}.png`}
                 alt={skill}
                 width={40}
                 height={40}
