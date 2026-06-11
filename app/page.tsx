@@ -12,7 +12,7 @@ export default function Page() {
     {
       school: "University of Minnesota Duluth",
       degree: "B.S. Computer Science",
-      date: "2023 – 2026",
+      date: "Aug 2023 – May 2026",
       description:
         "ABET Accredited • Artificial Intelligence, Computer Security, Database Systems, Operating Systems, Software Engineering, Mobile UX Design, and Automata & Formal Languages.",
     },
@@ -25,7 +25,7 @@ export default function Page() {
       href: "https://kboyskare.com",
       image: "/projects/kboyskare.png",
       description:
-        "Developed and maintained nonprofit web experiences supporting outreach and fundraising.",
+        "Designed and launched the web presence for K'Boys Kare, a 501(c)(3) nonprofit supporting pediatric cardiac patients, including donation workflows, program pages, and community engagement features.",
     },
     {
       name: "Wealtho",
@@ -33,7 +33,7 @@ export default function Page() {
       href: "https://wealtho.app",
       image: "/projects/wealtho.png",
       description:
-        "Building a gamified finance platform designed to help users improve financial habits through AI-powered insights.",
+        "Built and deployed a live SaaS application as sole founder and engineer, owning the full stack: UX design, backend architecture, database schema, and CI/CD pipeline.",
     }
   ];
 
@@ -41,7 +41,7 @@ export default function Page() {
     {
       company: "Shyne Bright Services LLC",
       role: "Software Engineer",
-      date: "June 2025 – Jan 2026",
+      date: "Jun 2025 – Jan 2026",
       description:
         "Early stage startup. Built authentication, dashboards, ride scheduling systems, user profiles, and transportation workflows.",
     },
