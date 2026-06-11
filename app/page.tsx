@@ -72,7 +72,7 @@ export default function Page() {
               </p>{" "}
               <div className="flex flex-wrap gap-4 mt-8">
                 <Link
-                  href="/OwenCrandallResume2026.pdf"
+                  href="/OwenCrandall_Resume2026.pdf"
                   target="_blank"
                   className="bg-white px-6 py-3 shadow-md rounded-xl font-medium hover:bg-slate-50"
                 >
